@@ -6,16 +6,22 @@ int main(int argc, char *argv[])
     io_iterator_t matchingServicesIterator = MACH_PORT_NULL;
     kern_return_t kernStatus = IOServiceGetMatchingServices(kIOMasterPortDefault, IOServiceNameMatching("IOHIDSystem"), &matchingServicesIterator);
         if (kernStatus != KERN_SUCCESS || !matchingServicesIterator)
-            return NO;
+            goto failed;
     
     io_service_t currentService = MACH_PORT_NULL;
     while ((currentService = IOIteratorNext(matchingServicesIterator)))
     {
         kernStatus = IORegistryEntrySetCFProperty(currentService, CFSTR("HIDScrollCountMinDeltaToStart"), @(1000));
             if (kernStatus != KERN_SUCCESS)
-                return 1;
+                goto failed;
     }
     
     NSLog(@"Disabled extreme scroll acceleration");
     return 0;
+    
+    failed:
+    {
+        NSLog(@"Failed to disable extreme scroll acceleration");
+        return 1;
+    }
 }
