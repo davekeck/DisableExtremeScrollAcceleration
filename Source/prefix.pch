@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DisableSuperScrollAcceleration' target in the 'DisableSuperScrollAcceleration' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
