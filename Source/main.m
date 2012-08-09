@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         kernStatus = IORegistryEntrySetCFProperty(currentService, CFSTR("HIDScrollCountMinDeltaToStart"), @(1000));
             if (kernStatus != KERN_SUCCESS)
             {
-                NSLog(@"Failed to disable extreme scroll acceleration for IOHIDSystem: %p", currentService);
+                NSLog(@"Failed to disable extreme scroll acceleration for IOHIDSystem: %p", (void *)currentService);
                 continue;
             }
     }
