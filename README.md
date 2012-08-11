@@ -9,4 +9,4 @@ __===== DOWNLOAD =====__
 
 __===== INSTALLATION =====__
 
-To install the app, put it a safe place (e.g. /Applications), and set it to be launched when you log in (using the 'Users & Groups' preference pane in System Preferences.) Note that this app has no user interface -- the app does its work in the background and immediately quits.
+To install the app, put it in a safe place (e.g. /Applications), and set it to be launched when you log in (using the 'Users & Groups' preference pane in System Preferences.) Note that this app has no user interface -- the app does its work in the background and immediately quits.
