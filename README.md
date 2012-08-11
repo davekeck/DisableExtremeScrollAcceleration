@@ -3,7 +3,7 @@ DisableExtremeScrollAcceleration
 
 This app disables the new scroll acceleration introduced in Mac OS 10.8 (Mountain Lion). If you're like me, you might make rapid, small scrolling gestures when scanning a document. Mountain Lion changed the scrolling behavior such that after a few of these rapid gestures, 'extreme acceleration' occurs, causing the document to scroll far more than I usually intend. This app disables this behavior.
 
-**Note that this app has no user interface -- it does its work in the background and immediately quits.**
+**Note that this app has no user interface -- upon launch, it does its work in the background (without appearing in the Dock) and immediately quits.**
 
 __===== DOWNLOAD =====__
 
